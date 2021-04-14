@@ -45,4 +45,21 @@ public class IntBst {
         }
     }
 
+    // preOrder -- preorder traversal
+    public String preOrder(){
+        if (root != null) {
+            return root.preOrder();
+        } else {
+            return "";
+        }
+    }
+
+    // postOrder -- in order traversal
+    public String postOrder(){
+        if (root != null) {
+            return root.postOrder();
+        } else {
+            return "";
+        }
+    }
 }

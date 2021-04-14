@@ -91,7 +91,7 @@ public class IntNode {
                 // Case 3 - two children
                 Random r = new Random();  // Random value generator
 
-                //  (1) Identify a new vlaue, then (2) remove the duplicate
+                //  (1) Identify a new value, then (2) remove the duplicate
                 if (r.nextBoolean()){
                     // get maximum value from left
                     value = left.rightMost();
@@ -150,5 +150,41 @@ public class IntNode {
         return treeStr;
     }
 
+    public String preOrder(){
+        String treeStr = "";
+        // Visit
+        treeStr = treeStr + "[" + value + "]";
+
+        // Go left
+        if (left != null) {
+            treeStr = treeStr + left.preOrder();
+        }
+
+        // Go right
+        if (right != null) {
+            treeStr = treeStr + right.preOrder();
+        }
+
+        return treeStr;
+    }
+
+    public String postOrder(){
+        String treeStr = "";
+
+        // Go left
+        if (left != null) {
+            treeStr = treeStr + left.postOrder();
+        }
+
+        // Go right
+        if (right != null) {
+            treeStr = treeStr + right.postOrder();
+        }
+
+        // Visit
+        treeStr = treeStr + "[" + value + "]";
+
+        return treeStr;
+    }
 
 }

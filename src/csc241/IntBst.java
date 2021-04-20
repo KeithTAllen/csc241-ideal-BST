@@ -62,4 +62,8 @@ public class IntBst {
             return "";
         }
     }
+
+//    public boolean checkPerfect(){
+//        if (root != )
+//    }
 }

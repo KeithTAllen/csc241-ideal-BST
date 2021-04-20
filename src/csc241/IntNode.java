@@ -186,4 +186,22 @@ public class IntNode {
 
         return treeStr;
     }
+
+    public boolean checkPerfect() {
+        if(left == null && right == null){
+            return true;
+        }
+        if(right == null && left != null){
+            return false;
+        }
+        if(right != null && left == null){
+            return false;
+        }
+        else {
+            if(left.checkPerfect()){
+                return right.checkPerfect();
+            }
+            else{return false;}
+        }
+    }
 }

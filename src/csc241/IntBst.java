@@ -54,7 +54,7 @@ public class IntBst {
         }
     }
 
-    // postOrder -- in order traversal
+    // postOrder -- post order traversal
     public String postOrder(){
         if (root != null) {
             return root.postOrder();
@@ -63,7 +63,10 @@ public class IntBst {
         }
     }
 
-//    public boolean checkPerfect(){
-//        if (root != )
-//    }
+    public boolean checkPerfect(){
+        if (root != null){
+            return root.checkPerfect();
+        }
+        else return true;
+    }
 }

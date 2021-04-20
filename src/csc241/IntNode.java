@@ -187,6 +187,7 @@ public class IntNode {
         return treeStr;
     }
 
+    //checkPerfect() checks to see if a tree is perfect. Returns a boolean
     public boolean checkPerfect() {
         if(left == null && right == null){
             return true;

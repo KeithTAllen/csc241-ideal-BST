@@ -6,8 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Create/print out an ArrayList of sorted Integers
         ArrayList<Integer> orderedlist1 = new ArrayList<>();
-        for(int x = 1; x <= 7; x++){
+        for(int x = 1; x <= 15; x++){
             orderedlist1.add(x);
         }
         for ( Integer x : orderedlist1) {
@@ -16,6 +17,7 @@ public class Main {
 
         System.out.println("-------------------");
 
+        //Sort/print out the integers into "BstOrder"
         BstSorter sorter1 = new BstSorter(orderedlist1);
         ArrayList<Integer> bstOrderedList1 = sorter1.sort();
         for (Integer x : bstOrderedList1) {
@@ -24,6 +26,7 @@ public class Main {
 
         System.out.println("-------------------");
 
+        //Put the BstOrdered list into a BST and printout the tree in three ways
         IntBst bst1 = new IntBst();
         for(int x = 0; x < bstOrderedList1.size(); x++){
             bst1.insert(bstOrderedList1.get(x));
@@ -34,38 +37,10 @@ public class Main {
 
         System.out.println("-------------------");
 
+        //check if the tree is perfect and add another element to disrupt it.
         System.out.println("bst1 perfect: " + bst1.checkPerfect());
+        System.out.println("add value to unbalance tree");
         bst1.insert(0);
         System.out.println("bst1 perfect: " + bst1.checkPerfect());
-
-//        IntBst tree1 = new IntBst();
-//        tree1.insert(4);
-//        tree1.insert(2);
-//        tree1.insert(6);
-//        tree1.insert(1);
-//        tree1.insert(3);
-//        tree1.insert(5);
-//        tree1.insert(7);
-//
-//        tree1.insert(20);
-//        tree1.insert(10);
-//        System.out.println("INORDER: " + tree1.inOrder());
-//        tree1.insert(30);
-//        System.out.println("INORDER: " + tree1.inOrder());
-//
-//
-//        System.out.println("CONTAINS 30: " + tree1.contains(30));
-//        System.out.println("CONTAINS 15: " + tree1.contains(15));
-
-        // Remove
-//        tree1.remove(30);
-//        System.out.println("CONTAINS 30 after remove: " + tree1.contains(30));
-//        tree1.remove(20);
-//        System.out.println("CONTAINS 20 after remove: " + tree1.contains(20));
-//        System.out.println("CONTAINS 10 after remove: " + tree1.contains(10));
-//
-//        System.out.println("INORDER: " + tree1.inOrder());
-//        System.out.println("PREORDER: " + tree1.preOrder());
-//        System.out.println("POSTORDER: " + tree1.postOrder());
     }
 }

@@ -20,7 +20,7 @@ public class IntBst {
         }
     }
 
-    // Contains -- look for a value
+    // Contains - look for a value
     public boolean contains(int v){
         if (root == null) {
             return false;
@@ -29,14 +29,14 @@ public class IntBst {
         }
     }
 
-    // remove -- remove a value
+    // remove - remove a value
     public void remove(int v){
         if (root != null) {
             root = root.remove(v);
         }
     }
 
-    // inOrder -- in order traversal
+    // inOrder - in order traversal
     public String inOrder(){
         if (root != null) {
             return root.inOrder();
@@ -45,7 +45,7 @@ public class IntBst {
         }
     }
 
-    // preOrder -- preorder traversal
+    // preOrder - preorder traversal
     public String preOrder(){
         if (root != null) {
             return root.preOrder();
@@ -54,7 +54,7 @@ public class IntBst {
         }
     }
 
-    // postOrder -- post order traversal
+    // postOrder - post order traversal
     public String postOrder(){
         if (root != null) {
             return root.postOrder();
@@ -63,6 +63,7 @@ public class IntBst {
         }
     }
 
+    // checkPerfect - checks if tree is perfectly balanced
     public boolean checkPerfect(){
         if (root != null){
             return root.checkPerfect();

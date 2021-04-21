@@ -7,8 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         //Create/print out an ArrayList of sorted Integers
+        //Change second argument to pow for easy list change
         ArrayList<Integer> orderedlist1 = new ArrayList<>();
-        for(int x = 1; x <= 15; x++){
+        for(int x = 1; x <= (Math.pow(2,3)-1); x++){
             orderedlist1.add(x);
         }
         for ( Integer x : orderedlist1) {
@@ -39,8 +40,18 @@ public class Main {
 
         //check if the tree is perfect and add another element to disrupt it.
         System.out.println("bst1 perfect: " + bst1.checkPerfect());
-        System.out.println("add value to unbalance tree");
-        bst1.insert(0);
+        System.out.println("\nAdd value (1000) to unbalance tree");
+        bst1.insert(1000);
         System.out.println("bst1 perfect: " + bst1.checkPerfect());
+
+        System.out.println("\nRemove value (1000) to re-balance tree");
+        bst1.remove(1000);
+        System.out.println("bst1 perfect: " + bst1.checkPerfect());
+
+        System.out.println("\nAdd value (-1000) to unbalance tree");
+        bst1.insert(-1000);
+        System.out.println("bst1 perfect: " + bst1.checkPerfect());
+
+
     }
 }

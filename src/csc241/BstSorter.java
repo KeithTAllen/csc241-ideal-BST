@@ -26,7 +26,7 @@ public class BstSorter {
         Integer pullRequest =(int) ((c*root)/Math.pow(2,power));
 
         //adds all even placed list items
-        //when pull request equals 1, a;; even placed items have been added to the BstOrdered list
+        //when pull request equals 1, all even placed items have been added to the BstOrdered list
         while(pullRequest != 1){
             //if the pullRequest is greater than a possible place, this means that we need to
             //go down a level in the tree. So c is reset and power is incremented.
